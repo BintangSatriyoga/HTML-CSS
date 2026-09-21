@@ -1,65 +1,229 @@
-body {
-    background-color: black
-}
-h1 {
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    font-size: 100px;
-    text-shadow: 2px 2px 5px red;
-}
-h2 {
-    color: white;
-    text-shadow: 2px 2px 5px red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    text-align: center;
-}
-h3 {
-    color: white;
-    text-shadow: 2px 2px 5px red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-size: 50px;
-}
-p {
-    color: white;
-    text-shadow: 2px 2px 5px red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    text-align: center;
-}
-ol {
-    color: white;
-    text-shadow: 2px 2px 5px red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    list-style-position: inside;
-}
-td {
-    color: white;
-    text-shadow: 2px 2px 5px red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-size: 20px;
-}
-th {
-    color: white;
-    text-shadow: 2px 2px 5px red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-}
-table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: 60%;
-}
-img {
-    display: block;
-    margin: 0 auto;
-    width: 280px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header-banner {
+    background: linear-gradient(135deg, #000000, #2a5298);
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-banner h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header-banner .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.main-container {
+    max-width: 950px;
+    margin: -30px auto 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    color: #000000;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #2a5298;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.image-wrapper {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.spotify-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.spotify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #000000, #2a5298);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotify-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(29, 185, 84, 0.5);
+}
+
+.grid-biodata {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.grid-item {
+    background: #f8fafc;
+    padding: 15px 20px;
+    border-left: 4px solid #2a5298;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px #0000000a;
+}
+
+.grid-item .label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.grid-item .value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e3c72;
+}
+
+.desc {
+    margin-bottom: 15px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.styled-table thead tr {
+    background: linear-gradient(135deg, #000000, #2a5298);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th, 
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f8fafc;
+}
+
+/* Hover Effect pada Baris Tabel */
+.styled-table tbody tr:hover {
+    background-color: #e2e8f0;
+}
+
+.badge {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #000000, #2a5298);
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .header-banner h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+    audio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #000000, #2a5298);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
